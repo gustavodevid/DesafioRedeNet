@@ -9,12 +9,13 @@
     // See also https://aka.ms/tsconfig/module
     "module": "ESNext",
     "target": "ES2022",
-    "types": [],
+    "types": ["@prisma/client"],
     "esModuleInterop": true,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
+    "moduleResolution": "node",
 
     // Other Outputs
     "sourceMap": true,
