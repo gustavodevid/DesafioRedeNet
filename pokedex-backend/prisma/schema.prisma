@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = file:./dev.db
+}
+
+// Modelo para o usuário
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  pokedex   Pokedex?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Modelo para a Pokédex, que será 1 para cada usuário
+model Pokedex {
+  id           Int       @id @default(autoincrement())
+  creationDate DateTime  @default(now())
+  userId       Int       @unique
+  user         User      @relation(fields: [userId], references: [id])
+  pokemons     Pokemon[]
+}
+
+// Modelo para o Pokémon, que pertence a uma Pokédex
+model Pokemon {
+  id           Int      @id @default(autoincrement())
+  codeAPI      Int
+  pokedexId    Int
+  pokedex      Pokedex  @relation(fields: [pokedexId], references: [id])
+}
