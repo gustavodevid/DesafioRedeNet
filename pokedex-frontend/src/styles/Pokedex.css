@@ -1,0 +1,75 @@
+.pokedex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+}
+
+.pokedex-header button {
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pokedex-header button:hover {
+  background-color: #c82333;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pokemon-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+}
+
+.pokemon-card h4 {
+  text-transform: capitalize;
+}
+
+.pokemon-card p {
+  color: #666;
+}
+
+.pokemon-card button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pokemon-card .add-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.pokemon-card .add-button:hover {
+  background-color: #218838;
+}
+
+.pokemon-card .remove-button {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.pokemon-card .remove-button:hover {
+  background-color: #e0a800;
+}

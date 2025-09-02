@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Pokedex.css';
 
 interface PokemonCardProps {
   pokemon: {
@@ -12,13 +13,13 @@ interface PokemonCardProps {
 
 const PokemonCard = ({ pokemon, isCaught, onAdd, onRemove }: PokemonCardProps) => {
   return (
-    <div style={{ border: '1px solid #ccc', padding: '10px', margin: '5px', borderRadius: '5px' }}>
+    <div className="pokemon-card" style={{ border: '1px solid #ccc', padding: '10px', margin: '5px', borderRadius: '5px' }}>
       <h4>{pokemon.name}</h4>
       <p>#{pokemon.codeAPI}</p>
       {isCaught ? (
-        <button onClick={() => onRemove(pokemon.codeAPI)}>Remover da Pokédex</button>
+        <button className="remove-button" onClick={() => onRemove(pokemon.codeAPI)}>Remover da Pokédex</button>
       ) : (
-        <button onClick={() => onAdd(pokemon.codeAPI)}>Adicionar à Pokédex</button>
+        <button className="add-button" onClick={() => onAdd(pokemon.codeAPI)}>Adicionar à Pokédex</button>
       )}
     </div>
   );
