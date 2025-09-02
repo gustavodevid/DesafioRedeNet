@@ -3,6 +3,7 @@ import {
   listAllPokemons,
   addPokemonToPokedex,
   removePokemonFromPokedex,
+  getPokedexByUserId,
 } from '../services/pokemonService.js';
 
 interface AuthRequest extends Request {
@@ -47,5 +48,20 @@ export const removePokemon = async (req: AuthRequest, res: Response) => {
     res.status(200).json(result);
   } catch (error: any) {
     res.status(400).json({ error: error.message });
+  }
+};
+
+export const getUserPokedex = async (req: AuthRequest, res: Response) => {
+  const userId = req.userId;
+
+  if (!userId) {
+    return res.status(401).json({ error: 'Usuário não autenticado.' });
+  }
+
+  try {
+    const userPokemons = await getPokedexByUserId(userId);
+    res.status(200).json(userPokemons);
+  } catch (error: any) {
+    res.status(404).json({ error: error.message });
   }
 };

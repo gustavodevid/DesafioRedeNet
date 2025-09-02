@@ -71,3 +71,18 @@ export const removePokemonFromPokedex = async (userId: number, pokemonCodeAPI: n
 
   return { message: 'Pokémon removido com sucesso.' };
 };
+
+export const getPokedexByUserId = async (userId: number) => {
+  const userPokedex = await prismaClient.pokedex.findUnique({
+    where: { userId },
+    include: {
+      pokemons: true,
+    },
+  });
+
+  if (!userPokedex) {
+    throw new Error('Pokédex do usuário não encontrada.');
+  }
+
+  return userPokedex.pokemons;
+};
