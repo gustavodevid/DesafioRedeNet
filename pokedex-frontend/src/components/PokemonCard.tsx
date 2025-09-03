@@ -16,6 +16,7 @@ interface PokemonCardProps {
 }
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, isCaught, onAdd, onRemove }) => {
+  
   const handleToggle = () => {
     if (isCaught) {
       onRemove(pokemon.codeAPI)
@@ -24,16 +25,16 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, isCaught, onAdd, onR
     }
   }
 
+   const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.codeAPI}.png`
+
   return (
     <div className="pokemon-card">
       <div className="pokemon-image-container">
-        {pokemon.image ? (
-          <img src={pokemon.image || "/placeholder.svg"} alt={pokemon.name} className="pokemon-image" />
-        ) : (
-          <div className="pokemon-placeholder">
-            <span>IMAGEM POKÉMON</span>
-          </div>
-        )}
+        <img 
+          src={imageUrl} 
+          alt={pokemon.name} 
+          className="pokemon-image" 
+        />
       </div>
 
       <div className="pokemon-info">
