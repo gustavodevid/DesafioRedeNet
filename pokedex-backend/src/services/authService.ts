@@ -47,3 +47,27 @@ export const loginUser = async (email: string, password: string) => {
 
   return { user, token };
 };
+
+export const getUserById = async (userId: number) => {
+  const user = await prismaClient.user.findUnique({
+    where: { id: userId },
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      createdAt: true,
+      updatedAt: true,
+      pokedex: {
+        select: {
+          id: true,
+        },
+      },
+    },
+  });
+
+  if (!user) {
+    throw new Error('Usuário não encontrado.');
+  }
+
+  return user;
+};

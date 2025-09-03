@@ -14,10 +14,10 @@ const Login = () => {
     e.preventDefault()
     try {
       const response = await api.post("/auth/login", { email, password })
-      const token = response.data.token
+      const { token, username }  = response.data
       localStorage.setItem("token", token)
       alert("Login bem-sucedido!")
-      navigate("/pokedex")
+      navigate("/pokedex", {state : {username}})
     } catch (error: any) {
       alert("Erro no login: " + error.response.data.error)
     }

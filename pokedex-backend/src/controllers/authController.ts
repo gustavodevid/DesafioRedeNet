@@ -1,5 +1,9 @@
 import { type Request, type Response } from 'express';
-import { registerUser, loginUser } from '../services/authService.js';
+import { registerUser, loginUser, getUserById } from '../services/authService.js';
+
+interface AuthRequest extends Request {
+  userId?: number;
+}
 
 export const register = async (req: Request, res: Response) => {
   const { name, email, password } = req.body;
@@ -18,5 +22,20 @@ export const login = async (req: Request, res: Response) => {
     res.status(200).json({ message: 'Login bem-sucedido!', user, token });
   } catch (error: any) {
     res.status(401).json({ error: error.message });
+  }
+};
+
+export const getAuthenticatedUser = async (req: AuthRequest, res: Response) => {
+  const userId = req.userId;
+
+  if (!userId) {
+    return res.status(401).json({ error: 'Usuário não autenticado.' });
+  }
+
+  try {
+    const user = await getUserById(userId);
+    res.status(200).json(user);
+  } catch (error: any) {
+    res.status(404).json({ error: error.message });
   }
 };

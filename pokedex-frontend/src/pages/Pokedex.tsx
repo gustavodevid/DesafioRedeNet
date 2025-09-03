@@ -3,15 +3,17 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { usePokedex } from "../hooks/usePokedex"
+import { useAuth } from "../hooks/useAuth"
 import PokemonCard from "../components/PokemonCard"
 import "../styles/Pokedex.css"
 
 const Pokedex = () => {
   const navigate = useNavigate()
+  const { user, loading: authLoading } = useAuth()
   const { pokemons, userPokedex, loading, error, addPokemon, removePokemon } = usePokedex()
   const [searchTerm, setSearchTerm] = useState("")
 
-  if (loading) {
+  if (loading || authLoading) {
     return (
       <div className="pokedex-container">
         <div className="loading-screen">
@@ -48,7 +50,7 @@ const Pokedex = () => {
       <header className="pokedex-header">
         <div className="header-left">
           <h1 className="pokedex-title">POKÉDEX</h1>
-          <span className="user-name">| NOME USUÁRIO</span>
+          <span className="user-name">| {user?.name || "USUÁRIO"}</span>
         </div>
         <button className="logout-btn" onClick={handleLogout}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
