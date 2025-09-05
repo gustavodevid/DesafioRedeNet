@@ -7,8 +7,6 @@
  * File: App.tsx
  * Description: Main component handling the application's routing.
  */
-
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Register from './pages/Register';
 import Login from './pages/Login';
