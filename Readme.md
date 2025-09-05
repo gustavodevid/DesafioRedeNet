@@ -51,7 +51,7 @@ Siga os passos abaixo para instalar e configurar o projeto:
 
 1.  Clone este repositório:
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone https://github.com/gustavodevid/DesafioRedeNet.git
     ```
 
 2.  Entre na pasta do projeto e instale as dependências do **backend**:
