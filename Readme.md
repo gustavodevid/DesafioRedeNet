@@ -2,6 +2,8 @@
 
 Uma aplicação web cliente-servidor para gerenciar e controlar uma Pokédex pessoal. O projeto permite que usuários se cadastrem, façam login e adicionem ou removam Pokémons de sua coleção. A aplicação consome a [PokéAPI](https://pokeapi.co/) para listar os Pokémons disponíveis.
 
+
+### [Site](https://desafio-rede-net.vercel.app)
 ---
 
 ### **Funcionalidades**

@@ -15,7 +15,7 @@ const Register = () => {
     try {
       await api.post("/auth/register", { name, email, password })
       alert("Registro bem-sucedido! Faça login para continuar.")
-      navigate("/login")
+      navigate("/login") 
     } catch (error: any) {
       alert("Erro no registro: " + error.response.data.error)
     }
