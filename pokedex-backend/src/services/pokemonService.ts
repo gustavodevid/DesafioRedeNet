@@ -1,3 +1,12 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: pokemonService.ts
+ * Description: Business logic for pokemon and data retrieval.
+ */
+
 import axios from 'axios';
 import { prismaClient } from '../database/prismaClient.js';
 

@@ -1,3 +1,12 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: pokemonController.ts
+ * Description: Controllers for pokemons.
+ */
+
 import { type Request, type Response } from 'express';
 import { 
   listAllPokemons,

@@ -1,3 +1,12 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: pokemonRoutes.ts
+ * Description: Routes logic for pokemon and data retrieval.
+ */
+
 import { Router } from 'express';
 import { listPokemons, addPokemon, removePokemon, getUserPokedex } from '../controllers/pokemonController.js';
 import { authenticateToken } from '../middleware/authMiddleware.js';

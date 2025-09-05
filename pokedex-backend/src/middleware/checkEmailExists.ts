@@ -1,3 +1,12 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: checkEmailExists.ts
+ * Description: Middleweare Logic for check email.
+ */
+
 import { type Request, type Response, type NextFunction } from 'express';
 import { prismaClient } from '../database/prismaClient.js';
 import { z } from 'zod';
