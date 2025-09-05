@@ -1,3 +1,12 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: server.ts
+ * Description: Main entry point and server setup for the backend API.
+ */
+
 import express from 'express';
 import cors from 'cors';
 import authRoutes from './routes/authRoutes.js';

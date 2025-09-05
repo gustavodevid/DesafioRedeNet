@@ -1,3 +1,11 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: authService.ts
+ * Description: Business logic for user authentication and data retrieval.
+ */
 
 import { prismaClient } from '../database/prismaClient.js';
 import bcrypt from 'bcryptjs';

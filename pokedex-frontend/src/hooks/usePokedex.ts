@@ -1,4 +1,11 @@
-"use client"
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: usePokedex.ts
+ * Description: Custom hook for fetching and managing Pokémon data.
+ */
 
 import { useState, useEffect } from "react"
 import api from "../api/api"

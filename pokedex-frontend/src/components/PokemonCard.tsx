@@ -1,4 +1,11 @@
-"use client"
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: PokemonCard.tsx
+ * Description: Reusable component to display a single Pokémon.
+ */
 
 import type React from "react"
 

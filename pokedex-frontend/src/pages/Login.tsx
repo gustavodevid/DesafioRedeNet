@@ -1,4 +1,11 @@
-"use client"
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: Login.tsx
+ * Description: Login page and form for user authentication.
+ */
 
 import type React from "react"
 import { useState } from "react"

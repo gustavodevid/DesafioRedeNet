@@ -1,3 +1,12 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: authController.ts
+ * Description: Controllers for user authentication (register and login).
+ */
+
 import { type Request, type Response } from 'express';
 import { registerUser, loginUser, getUserById } from '../services/authService.js';
 

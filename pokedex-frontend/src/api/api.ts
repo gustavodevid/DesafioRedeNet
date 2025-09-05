@@ -1,3 +1,11 @@
+/*
+ * POKÉDEX CHALLENGE - Fullstack Application
+ * Developed by: Gustavo David
+ * GitHub: https://github.com/gustavodevid
+ * LinkedIn: https://www.linkedin.com/in/devbardavid/
+ * File: api.ts
+ * Description: Axios instance for communicating with the backend API.
+ */
 
 import axios from 'axios';
 

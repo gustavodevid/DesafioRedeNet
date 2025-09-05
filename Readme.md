@@ -112,6 +112,6 @@ A API oferece os seguintes endpoints para gerenciamento.
 
 ### **Autor**
 
-- [Gustavo David]
-- <a href="https://https://github.com/gustavodevid"><b>GitHub</b></a><br/>
-- <a href="https://www.linkedin.com/in/devbardavid/"><b>Linkedin</b></a><br/>
+- **Nome:** Gustavo David
+- **GitHub:** [https://github.com/gustavodevid](https://github.com/gustavodevid)
+- **LinkedIn:** [https://www.linkedin.com/in/devbardavid/](https://www.linkedin.com/in/devbardavid/)
